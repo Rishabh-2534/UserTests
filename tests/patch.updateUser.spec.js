@@ -17,10 +17,10 @@ test.describe("patch Update User API", () => {
       userId = existingUser.id;
 
       const dupId = "8067fa27-99a7-426b-9b48-aad7c4a8d37b";
-      const dupresponse = await request.get(`${baseUrl}/users/${id}`, {
+      const dupresponse = await request.get(`${baseUrl}/users/${dupId}`, {
         headers: headers,
       });
-      dupUser = await response.json();
+      dupUser = await dupresponse.json();
 
       /*const timestamp = Date.now();
       const resp = await requestObj.post(`${baseUrl}/users`, {
